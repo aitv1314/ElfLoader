@@ -1,0 +1,183 @@
+
+ex2:     file format pe-x86-64
+ex2
+architecture: i386:x86-64, flags 0x00000039:
+HAS_RELOC, HAS_DEBUG, HAS_SYMS, HAS_LOCALS
+start address 0x0000000000000000
+
+Characteristics 0x4
+	line numbers stripped
+
+Time/Date		Thu Jan  1 08:00:00 1970
+Magic			0000
+MajorLinkerVersion	0
+MinorLinkerVersion	0
+SizeOfCode		0000000000000000
+SizeOfInitializedData	0000000000000000
+SizeOfUninitializedData	0000000000000000
+AddressOfEntryPoint	0000000000000000
+BaseOfCode		0000000000000000
+ImageBase		0000000000000000
+SectionAlignment	00000000
+FileAlignment		00000000
+MajorOSystemVersion	0
+MinorOSystemVersion	0
+MajorImageVersion	0
+MinorImageVersion	0
+MajorSubsystemVersion	0
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00000000
+SizeOfHeaders		00000000
+CheckSum		00000000
+Subsystem		00000000	(unspecified)
+DllCharacteristics	00000000
+SizeOfStackReserve	0000000000000000
+SizeOfStackCommit	0000000000000000
+SizeOfHeapReserve	0000000000000000
+SizeOfHeapCommit	0000000000000000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000000
+
+The Data Directory
+Entry 0 0000000000000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000000000000000 00000000 Import Directory [parts of .idata]
+Entry 2 0000000000000000 00000000 Resource Directory [.rsrc]
+Entry 3 0000000000000000 00000000 Exception Directory [.pdata]
+Entry 4 0000000000000000 00000000 Security Directory
+Entry 5 0000000000000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 0000000000000000 00000000 Debug Directory
+Entry 7 0000000000000000 00000000 Description Directory
+Entry 8 0000000000000000 00000000 Special Directory
+Entry 9 0000000000000000 00000000 Thread Storage Directory [.tls]
+Entry a 0000000000000000 00000000 Load Configuration Directory
+Entry b 0000000000000000 00000000 Bound Import Directory
+Entry c 0000000000000000 00000000 Import Address Table Directory
+Entry d 0000000000000000 00000000 Delay Import Directory
+Entry e 0000000000000000 00000000 CLR Runtime Header
+Entry f 0000000000000000 00000000 Reserved
+
+The Function Table (interpreted .pdata section contents)
+vma:			BeginAddress	 EndAddress	  UnwindData
+ 0000000000000000:	0000000000000000 0000000000000004 0000000000000000
+
+Dump of .xdata
+ 0000000000000000 (rva: 00000000): 0000000000000000 - 0000000000000004
+warning: xdata section corrupt
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000010  0000000000000000  0000000000000000  000001f4  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000000  2**4
+                  ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  00000000  2**4
+                  ALLOC
+  3 .xdata        00000004  0000000000000000  0000000000000000  00000204  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .pdata        0000000c  0000000000000000  0000000000000000  00000208  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  5 .debug_frame  00000030  0000000000000000  0000000000000000  00000214  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  6 .debug_info   000000cd  0000000000000000  0000000000000000  00000244  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  7 .debug_abbrev 0000004e  0000000000000000  0000000000000000  00000311  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_aranges 00000030  0000000000000000  0000000000000000  0000035f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  9 .debug_line   00000048  0000000000000000  0000000000000000  0000038f  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 10 .debug_str    00000000  0000000000000000  0000000000000000  00000000  2**0
+                  READONLY, DEBUGGING
+ 11 .rdata$zzz    00000020  0000000000000000  0000000000000000  000003d7  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+[  0](sec -2)(fl 0x00)(ty    0)(scl 103) (nx 1) 0x0000000000000000 ex2.cpp
+File 
+[  2](sec  1)(fl 0x00)(ty   20)(scl   2) (nx 1) 0x0000000000000000 _Z3addii
+AUX tagndx 0 ttlsiz 0x0 lnnos 0 next 0
+[  4](sec  1)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .text
+AUX scnlen 0x4 nreloc 0 nlnno 0
+[  6](sec  2)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .data
+AUX scnlen 0x0 nreloc 0 nlnno 0
+[  8](sec  3)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .bss
+AUX scnlen 0x0 nreloc 0 nlnno 0
+[ 10](sec  4)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .xdata
+AUX scnlen 0x4 nreloc 0 nlnno 0
+[ 12](sec  5)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .pdata
+AUX scnlen 0xc nreloc 3 nlnno 0
+[ 14](sec  6)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .debug_frame
+AUX scnlen 0x30 nreloc 2 nlnno 0
+[ 16](sec  7)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .debug_info
+AUX scnlen 0xcd nreloc 4 nlnno 0
+[ 18](sec  8)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .debug_abbrev
+AUX scnlen 0x4e nreloc 0 nlnno 0
+[ 20](sec  9)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .debug_aranges
+AUX scnlen 0x30 nreloc 2 nlnno 0
+[ 22](sec 10)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .debug_line
+AUX scnlen 0x48 nreloc 1 nlnno 0
+[ 24](sec 12)(fl 0x00)(ty    0)(scl   3) (nx 1) 0x0000000000000000 .rdata$zzz
+AUX scnlen 0x1d nreloc 0 nlnno 0
+
+
+Contents of section .text:
+ 0000 8d0411c3 90909090 90909090 90909090  ................
+Contents of section .xdata:
+ 0000 01000000                             ....            
+Contents of section .pdata:
+ 0000 00000000 04000000 00000000           ............    
+Contents of section .debug_frame:
+ 0000 14000000 ffffffff 03000178 100c0708  ...........x....
+ 0010 90010000 00000000 14000000 00000000  ................
+ 0020 00000000 00000000 04000000 00000000  ................
+Contents of section .debug_info:
+ 0000 c9000000 04000000 00000801 474e5520  ............GNU 
+ 0010 432b2b31 34203130 2d706f73 69782032  C++14 10-posix 2
+ 0020 30323230 31313320 2d6d7475 6e653d67  0220113 -mtune=g
+ 0030 656e6572 6963202d 6d617263 683d7838  eneric -march=x8
+ 0040 362d3634 202d6720 2d4f3300 04657832  6-64 -g -O3..ex2
+ 0050 2e637070 002f6d6e 742f642f 434f4445  .cpp./mnt/d/CODE
+ 0060 2f656c66 2f657861 6d706c65 00000000  /elf/example....
+ 0070 00000000 00040000 00000000 00000000  ................
+ 0080 00026164 64000103 0c5f5a33 61646469  ..add...._Z3addi
+ 0090 6900c500 00000000 00000000 00000400  i...............
+ 00a0 00000000 0000019c c5000000 03780001  .............x..
+ 00b0 0314c500 00000152 03790001 031bc500  .......R.y......
+ 00c0 00000151 00040405 696e7400 00        ...Q....int..   
+Contents of section .debug_abbrev:
+ 0000 01110125 08130b03 081b0811 01120710  ...%............
+ 0010 17000002 2e013f19 03083a0b 3b0b390b  ......?...:.;.9.
+ 0020 6e084913 11011207 40189742 19011300  n.I.....@..B....
+ 0030 00030500 03083a0b 3b0b390b 49130218  ......:.;.9.I...
+ 0040 00000424 000b0b3e 0b030800 0000      ...$...>......  
+Contents of section .debug_aranges:
+ 0000 2c000000 02000000 00000800 00000000  ,...............
+ 0010 00000000 00000000 04000000 00000000  ................
+ 0020 00000000 00000000 00000000 00000000  ................
+Contents of section .debug_line:
+ 0000 44000000 03001e00 00000101 fb0e0d00  D...............
+ 0010 01010101 00000001 00000100 6578322e  ............ex2.
+ 0020 63707000 00000000 051e0009 02000000  cpp.............
+ 0030 00000000 00140601 05200601 052b0601  ......... ...+..
+ 0040 052e3c02 01000101                    ..<.....        
+Contents of section .rdata$zzz:
+ 0000 4743433a 2028474e 55292031 302d706f  GCC: (GNU) 10-po
+ 0010 73697820 32303232 30313133 00000000  six 20220113....
+
+Disassembly of section .text:
+
+0000000000000000 <_Z3addii>:
+   0:	8d 04 11             	lea    (%rcx,%rdx,1),%eax
+   3:	c3                   	ret    
+   4:	90                   	nop
+   5:	90                   	nop
+   6:	90                   	nop
+   7:	90                   	nop
+   8:	90                   	nop
+   9:	90                   	nop
+   a:	90                   	nop
+   b:	90                   	nop
+   c:	90                   	nop
+   d:	90                   	nop
+   e:	90                   	nop
+   f:	90                   	nop

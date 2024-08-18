@@ -1,0 +1,1 @@
+extern int add(int x, int y) __attribute__((fastcall));

@@ -5,22 +5,27 @@
 #include <stdio.h>
 #include <string_view>
 
+#include <windows.h>
+
 #include "common.h"
-#include "libelf/libelf.h"
-#include "libelf/gelf.h"
+#include "elf.hpp"
 
 class ElfLoader {
  public:
   ElfLoader(std::string_view path) { Init(path); }
-  ~ElfLoader() { free(data_); }
+  ~ElfLoader();
+
+ public:
+  void Load();
+  void Show();
+  void Run();
 
  private:
   void Init(std::string_view path);
-  void Load();
-  void Show();
 
-  bool ValidateCheck();  // 检查magic，判断文件类型
-  bool SetupLoadInfo();  // 填充地址
+ private:
+  bool ValidateCheck() { return true; }  // 检查magic，判断文件类型
+  bool SetupLoadInfo();                  // 填充地址
 
   void LayoutSection();
   void LayoutSymtab();
@@ -34,8 +39,10 @@ class ElfLoader {
     unsigned int sym, str, mod, vers, info, pcpu;
   } index;
 
-  Elf64_Ehdr* hdr;
-  Elf64_Shdr* shdr;
+  Elf64_Ehdr* hdr_;
+  Elf64_Shdr* shdr_;
+
+  char *secstrings_, *strtab_;
 };
 
 #endif  // ELF_LOADER_HPP

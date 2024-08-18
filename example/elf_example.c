@@ -1,5 +1,1 @@
-#include <stdio.h>
-
-void Enter(char* data) {
-    printf("data is %s", data);
-}
+extern int add(int x, int y) { return x + y; }
